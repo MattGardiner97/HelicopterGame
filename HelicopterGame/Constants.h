@@ -13,4 +13,8 @@ namespace Constants {
 	const float GRAVITY = 9.81;
 	const float HELICOPTER_VERTICAL_ACCELERATION = 27.5;
 	const float HELICOPTER_HORIZONTAL_VELOCITY = 75;
+
+	const int OBSTACLES_TO_GENERATE = 10;
+	const int OBSTACLE_WIDTH = 25;
+	const int OBSTACLE_HEIGHT = 75;;
 }
