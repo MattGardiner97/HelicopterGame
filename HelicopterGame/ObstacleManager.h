@@ -4,9 +4,9 @@
 
 class Engine;
 
-class ObstactleManager {
+class ObstacleManager {
 public:
-	ObstactleManager(SDL_Texture* Texture, Engine* Engine) : _texture(Texture), _engine(Engine) {}
+	ObstacleManager(SDL_Texture* Texture, Engine* Engine) : _texture(Texture), _engine(Engine) {}
 
 	void Cleanup();
 	void Draw();

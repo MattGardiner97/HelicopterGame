@@ -37,7 +37,7 @@ bool Engine::Init(string WindowTitle) {
 	_background = new Background(backgroundTexture, this);
 	_background2 = new Background(backgroundTexture, this);
 	_background2->SetX(Constants::WINDOW_WIDTH-1);
-	_obstacleManager = new ObstactleManager(obstacleTexture, this);
+	_obstacleManager = new ObstacleManager(obstacleTexture, this);
 
 	return true;
 }

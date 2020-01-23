@@ -21,7 +21,7 @@ private:
 	Helicopter* _helicopter = NULL;
 	Background* _background = NULL;
 	Background* _background2 = NULL;
-	ObstactleManager* _obstacleManager = NULL;
+	ObstacleManager* _obstacleManager = NULL;
 
 
 public:
