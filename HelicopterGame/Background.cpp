@@ -21,7 +21,7 @@ void Background::Draw() {
 void Background::Update() {
 	Time* time = _engine->GetTime();
 
-	this->_x -= Constants::HELICOPTER_HORIZONTAL_VELOCITY * time->GetDeltaTime();
+	this->_x -= Constants::BACKGROUND_SCROLL_SPEED * time->GetDeltaTime();
 
 	if (this->_x <= -Constants::WINDOW_WIDTH)
 		this->_x = Constants::WINDOW_WIDTH-1;

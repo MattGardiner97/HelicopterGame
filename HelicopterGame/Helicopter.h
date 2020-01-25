@@ -16,15 +16,19 @@ public:
 
 	}
 
+	bool Active = false;
+
 	void Update();
 	void Cleanup();
 	void Draw();
+	SDL_Rect GetBoundingRectangle();
+	void Reset();
+	bool IsOffScreen();
 
 private:
 	SDL_Texture* _texture = NULL;
 	Engine* _engine = NULL;
 	float _x;
 	float _y;
-	float _horizontalVelocity;
 	float _verticalVelocity;
 };

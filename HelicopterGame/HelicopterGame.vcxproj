@@ -71,8 +71,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\Matt\Desktop\C++\SDL2_image-2.0.5\include;C:\Users\Matt\Desktop\C++\SDL2-2.0.10\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Matt\Desktop\C++\SDL2_image-2.0.5\lib\x86;C:\Users\Matt\Desktop\C++\SDL2-2.0.10\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\Matt\Desktop\C++\SDL2_ttf-2.0.15\include;C:\Users\Matt\Desktop\C++\SDL2_image-2.0.5\include;C:\Users\Matt\Desktop\C++\SDL2-2.0.10\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Matt\Desktop\C++\SDL2_ttf-2.0.15\lib\x86;C:\Users\Matt\Desktop\C++\SDL2_image-2.0.5\lib\x86;C:\Users\Matt\Desktop\C++\SDL2-2.0.10\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -93,7 +93,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -142,28 +142,34 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Background.cpp" />
+    <ClCompile Include="CollisionChecker.cpp" />
+    <ClCompile Include="EasyDifficulty.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Graphics.cpp" />
     <ClCompile Include="Helicopter.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainMenu.cpp" />
     <ClCompile Include="ObstacleManager.cpp" />
+    <ClCompile Include="ObstaclePair.cpp" />
+    <ClCompile Include="TextTexture.cpp" />
     <ClCompile Include="TextureManager.cpp" />
     <ClCompile Include="Time.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\..\Desktop\C++\SDL2-2.0.10\lib\x86\SDL2.dll">
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Background.h" />
+    <ClInclude Include="CollisionChecker.h" />
     <ClInclude Include="Constants.h" />
+    <ClInclude Include="Difficulty.h" />
+    <ClInclude Include="EasyDifficulty.h" />
     <ClInclude Include="Engine.h" />
     <ClInclude Include="Graphics.h" />
     <ClInclude Include="Helicopter.h" />
     <ClInclude Include="Input.h" />
+    <ClInclude Include="MainMenu.h" />
+    <ClInclude Include="ObstaclePair.h" />
     <ClInclude Include="ObstacleManager.h" />
+    <ClInclude Include="TextTexture.h" />
     <ClInclude Include="TextureManager.h" />
     <ClInclude Include="Time.h" />
   </ItemGroup>
