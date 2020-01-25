@@ -36,6 +36,10 @@ bool MainMenu::Init() {
 	if (_hardSelectedTexture == NULL)
 		return false;
 
+	_pressSpaceTexture = CreateTextureFromString("Press Space to Begin", _regularTextFont, blackColor);
+	if (_pressSpaceTexture == NULL)
+		return false;
+
 	_gameoverRect.x = (Constants::WINDOW_WIDTH / 2) - (_gameoverTexture->TextureWidth / 2);
 	_gameoverRect.y = (Constants::WINDOW_HEIGHT / 4) - (_gameoverTexture->TextureHeight / 2);
 	_gameoverRect.w = _gameoverTexture->TextureWidth;
@@ -55,7 +59,11 @@ bool MainMenu::Init() {
 	_hardRect.y = (Constants::WINDOW_HEIGHT / 2) - (_hardTexture->TextureHeight / 2);
 	_hardRect.w = _hardTexture->TextureWidth;
 	_hardRect.h = _hardTexture->TextureHeight;
-
+	
+	_pressSpaceRect.x = (Constants::WINDOW_WIDTH / 2) - (_pressSpaceTexture->TextureWidth / 2);
+	_pressSpaceRect.y = (Constants::WINDOW_HEIGHT / 4 * 3) - (_pressSpaceTexture->TextureHeight / 2);
+	_pressSpaceRect.w = _pressSpaceTexture->TextureWidth;
+	_pressSpaceRect.h = _pressSpaceTexture->TextureHeight;
 
 
 	return true;
@@ -109,6 +117,13 @@ void MainMenu::Cleanup() {
 		_hardSelectedTexture->Cleanup();
 		delete _hardSelectedTexture;
 		_hardSelectedTexture = NULL;
+	}
+
+	if (_pressSpaceTexture != NULL)
+	{
+		_pressSpaceTexture->Cleanup();
+		delete _pressSpaceTexture;
+		_pressSpaceTexture = NULL;
 	}
 
 	return;
@@ -186,4 +201,6 @@ void MainMenu::Draw() {
 		_engine->GetGraphics()->RenderTexture(_hardSelectedTexture->Texture, &_hardRect);
 	else
 		_engine->GetGraphics()->RenderTexture(_hardTexture->Texture, &_hardRect);
+
+	_engine->GetGraphics()->RenderTexture(_pressSpaceTexture->Texture, &_pressSpaceRect);
 }

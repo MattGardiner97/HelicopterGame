@@ -41,7 +41,7 @@ private:
 	SDL_Rect _hardRect;
 	SDL_Rect _pressSpaceRect;
 
-	const int GAMEOVER_FONT_SIZE = 48;
+	const int GAMEOVER_FONT_SIZE = 64;
 	const int REGULAR_FONT_SIZE = 32;
 
 	bool _easySelected = true;
