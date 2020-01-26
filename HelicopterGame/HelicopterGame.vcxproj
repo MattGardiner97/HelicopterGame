@@ -152,7 +152,9 @@
     <ClCompile Include="MainMenu.cpp" />
     <ClCompile Include="ObstacleManager.cpp" />
     <ClCompile Include="ObstaclePair.cpp" />
+    <ClCompile Include="ScoreGUI.cpp" />
     <ClCompile Include="TextTexture.cpp" />
+    <ClCompile Include="TextTextureGenerator.cpp" />
     <ClCompile Include="TextureManager.cpp" />
     <ClCompile Include="Time.cpp" />
   </ItemGroup>
@@ -169,7 +171,9 @@
     <ClInclude Include="MainMenu.h" />
     <ClInclude Include="ObstaclePair.h" />
     <ClInclude Include="ObstacleManager.h" />
+    <ClInclude Include="ScoreGUI.h" />
     <ClInclude Include="TextTexture.h" />
+    <ClInclude Include="TextTextureGenerator.h" />
     <ClInclude Include="TextureManager.h" />
     <ClInclude Include="Time.h" />
   </ItemGroup>

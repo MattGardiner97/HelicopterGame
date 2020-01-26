@@ -22,9 +22,16 @@ bool Engine::Init(string WindowTitle) {
 	if (_input->Init() == false)
 		return false;
 
+	_textTextureGenerator = new TextTextureGenerator(_graphics->GetRenderer());
+
 	_mainMenu = new MainMenu(this);
 	if (_mainMenu->Init() == false)
 		return false;
+
+	_scoreGUI = new ScoreGUI(this);
+	if (_scoreGUI->Init() == false)
+		return false;
+	_scoreGUI->UpdateScore(0);
 
 	_easyDifficulty = new EasyDifficulty;
 	_currentDifficulty = _easyDifficulty;
@@ -115,6 +122,19 @@ void Engine::Cleanup() {
 		_mainMenu = NULL;
 	}
 
+	if (_scoreGUI != NULL)
+	{
+		_scoreGUI->Cleanup();
+		delete _scoreGUI;
+		_scoreGUI = NULL;
+	}
+
+	if (_textTextureGenerator != NULL)
+	{
+		delete _textTextureGenerator;
+		_textTextureGenerator = NULL;
+	}
+
 	SDL_Quit();
 	IMG_Quit();
 }
@@ -153,6 +173,7 @@ void Engine::Run() {
 		_obstacleManager->Draw();
 		_helicopter->Draw();
 		_mainMenu->Draw();
+		_scoreGUI->Draw();
 
 
 		//Present render target
@@ -183,6 +204,7 @@ void Engine::GameOver() {
 	_mainMenu->Active = true;
 	_obstacleManager->Active = false;
 	_helicopter->Active = false;
+	_mainMenu->NewGameRequested = false;
 }
 
 void Engine::NewGame() {
@@ -200,4 +222,13 @@ void Engine::NewGame() {
 	_mainMenu->Active = false;
 	_obstacleManager->Reset();
 	_helicopter->Reset();
+	_scoreGUI->UpdateScore(0);
+}
+
+TextTextureGenerator* Engine::GetTextTextureGenerator() {
+	return _textTextureGenerator;
+}
+
+void Engine::IncrementScore() {
+	_scoreGUI->UpdateScore(_scoreGUI->Score + 1);
 }

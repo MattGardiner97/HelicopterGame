@@ -59,6 +59,8 @@ void ObstacleManager::Update() {
 	{
 		if (_obstacles[i].X <= 0 - Constants::OBSTACLE_WIDTH)
 		{
+			_engine->IncrementScore();
+
 			float prevXPos = 0;
 			if (i == 0)
 				prevXPos = _obstacles[Constants::OBSTACLE_PAIRS_TO_GENERATE - 1].X;
