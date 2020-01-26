@@ -20,6 +20,6 @@ namespace Constants {
 	const int OBSTACLE_WIDTH = 25;
 	const int OBSTACLE_HEIGHT = 641;
 
-	const int HELICOPTER_SIZE = 25;
+	const int HELICOPTER_SIZE = 35;
 
 }
