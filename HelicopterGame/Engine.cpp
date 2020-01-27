@@ -34,6 +34,8 @@ bool Engine::Init(string WindowTitle) {
 	_scoreGUI->UpdateScore(0);
 
 	_easyDifficulty = new EasyDifficulty;
+	_mediumDifficulty = new MediumDifficulty;
+	_hardDifficulty = new HardDifficulty;
 	_currentDifficulty = _easyDifficulty;
 
 	//Load helicopter texture
@@ -114,6 +116,17 @@ void Engine::Cleanup() {
 		delete _easyDifficulty;
 		_easyDifficulty = NULL;
 	}
+	if (_mediumDifficulty != NULL)
+	{
+		delete _mediumDifficulty;
+		_mediumDifficulty = NULL;
+	}
+	if (_hardDifficulty != NULL)
+	{
+		delete _hardDifficulty;
+		_hardDifficulty = NULL;
+	}
+
 
 	if (_mainMenu != NULL)
 	{
@@ -214,6 +227,12 @@ void Engine::NewGame() {
 	{
 	case 0:
 		_currentDifficulty = _easyDifficulty;
+		break;
+	case 1:
+		_currentDifficulty = _mediumDifficulty;
+		break;
+	case 2:
+		_currentDifficulty = _hardDifficulty;
 		break;
 	}
 

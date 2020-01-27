@@ -18,6 +18,8 @@
 
 #include "Difficulty.h"
 #include "EasyDifficulty.h"
+#include "MediumDifficulty.h"
+#include "HardDifficulty.h"
 
 class Engine {
 private:
@@ -36,6 +38,8 @@ private:
 
 	Difficulty* _currentDifficulty = NULL;
 	EasyDifficulty* _easyDifficulty = NULL;
+	MediumDifficulty* _mediumDifficulty = NULL;
+	HardDifficulty* _hardDifficulty = NULL;
 
 
 	void GameOver();

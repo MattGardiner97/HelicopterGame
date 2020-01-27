@@ -63,6 +63,12 @@
     <ClCompile Include="TextTextureGenerator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MediumDifficulty.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HardDifficulty.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine.h">
@@ -114,6 +120,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TextTextureGenerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MediumDifficulty.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HardDifficulty.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

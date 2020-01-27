@@ -146,10 +146,12 @@
     <ClCompile Include="EasyDifficulty.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Graphics.cpp" />
+    <ClCompile Include="HardDifficulty.cpp" />
     <ClCompile Include="Helicopter.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainMenu.cpp" />
+    <ClCompile Include="MediumDifficulty.cpp" />
     <ClCompile Include="ObstacleManager.cpp" />
     <ClCompile Include="ObstaclePair.cpp" />
     <ClCompile Include="ScoreGUI.cpp" />
@@ -166,9 +168,11 @@
     <ClInclude Include="EasyDifficulty.h" />
     <ClInclude Include="Engine.h" />
     <ClInclude Include="Graphics.h" />
+    <ClInclude Include="HardDifficulty.h" />
     <ClInclude Include="Helicopter.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="MainMenu.h" />
+    <ClInclude Include="MediumDifficulty.h" />
     <ClInclude Include="ObstaclePair.h" />
     <ClInclude Include="ObstacleManager.h" />
     <ClInclude Include="ScoreGUI.h" />

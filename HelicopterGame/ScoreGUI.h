@@ -20,7 +20,7 @@ public:
 	bool Active = true;
 
 private:
-	const int FONT_SIZE = 16;
+	const int FONT_SIZE = 20;
 
 	TextTexture* _texture = NULL;
 	Engine* _engine = NULL;
