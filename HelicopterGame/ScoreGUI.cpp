@@ -8,7 +8,6 @@ void ScoreGUI::Cleanup() {
 	if (_font != NULL)
 	{
 		TTF_CloseFont(_font);
-		delete _font;
 		_font = NULL;
 	}
 }
